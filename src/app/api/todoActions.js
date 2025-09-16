@@ -10,9 +10,8 @@ export const getData = async () => {
   return data;
 };
 
-export const addTodo = async (id, text) => {
+export const addTodo = async (text) => {
   await db.insert(todo).values({
-    id: id,
     text: text,
   });
 };

@@ -11,9 +11,9 @@ const Todos = ({ todos }) => {
 
   // Function to create a new todo item
   const createTodo = (text) => {
-    const id = (todoItems.at(-1)?.id || 0) + 1;
-    addTodo(id, text);
-    setTodoItems((prev) => [...prev, { id: id, text, done: false }]);
+    //const id = (todoItems.at(-1)?.id || 0) + 1;
+    addTodo(text);
+    setTodoItems((prev) => [...prev, { id: Date.now(), text, done: false }]);
   };
 
   // Function to change the text of a todo item
