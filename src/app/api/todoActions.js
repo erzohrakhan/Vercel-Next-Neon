@@ -14,6 +14,7 @@ export const addTodo = async (text) => {
   await db.insert(todo).values({
     text: text,
   });
+  revalidatePath("/");
 };
 
 export const deleteTodo = async (id) => {
